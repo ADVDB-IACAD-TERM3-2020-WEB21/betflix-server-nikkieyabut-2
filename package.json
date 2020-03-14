@@ -1,0 +1,27 @@
+{
+  "name": "betflix-starter",
+  "version": "0.1.0",
+  "description": "Netflix clone that uses MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADVDB-IACAD-TERM3-2020-WEB21/betflix-starter.git"
+  },
+  "keywords": [
+    "netflix",
+    "clone",
+    "mongodb"
+  ],
+  "author": "John Paul Ada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ADVDB-IACAD-TERM3-2020-WEB21/betflix-starter/issues"
+  },
+  "homepage": "https://github.com/ADVDB-IACAD-TERM3-2020-WEB21/betflix-starter#readme",
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
+}

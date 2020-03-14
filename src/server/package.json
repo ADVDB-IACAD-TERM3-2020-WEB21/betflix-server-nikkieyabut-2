@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "graphpack",
+    "build": "graphpack build",
+    "start": "node ./build/index.js"
+  },
+  "author": "John Paul Ada",
+  "license": "MIT",
+  "devDependencies": {
+    "graphpack": "^1.0.9"
+  },
+  "dependencies": {
+    "mongoose": "^5.9.4"
+  }
+}
