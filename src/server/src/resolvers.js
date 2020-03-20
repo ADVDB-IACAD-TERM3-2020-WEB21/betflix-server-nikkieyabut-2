@@ -1,3 +1,9 @@
+/*
+  yabut's notes:
+    https://mongoosejs.com/docs/guide.html
+    https://mongoosejs.com/docs/connections.html
+*/
+
 // TODO: Import Mongoose here
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true})
@@ -11,9 +17,10 @@ db.once('open', function() {
 })
 
 var movieSchema = new mongoose.Schema({
-  title: String
+  title: String,
   // type: String,
-  // filename: String
+  // filename: String 
+      /// hindi naman pala nag-connect yung ibang data types ng nasa movies collection :<
 })
 
 // TODO: Replace `{}` with actual Movie model

@@ -403,6 +403,11 @@ webpackContext.id = "./src sync recursive ^\\.\\/(schema|schema\\/index)\\.(gql|
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/*
+  yabut's notes:
+    https://mongoosejs.com/docs/guide.html
+    https://mongoosejs.com/docs/connections.html
+*/
 // TODO: Import Mongoose here
 var mongoose = __webpack_require__(/*! mongoose */ "mongoose");
 
@@ -416,7 +421,8 @@ db.once('open', function () {// we're connected!
 });
 var movieSchema = new mongoose.Schema({
   title: String // type: String,
-  // filename: String
+  // filename: String 
+  /// hindi naman pala nag-connect yung ibang data types ng nasa movies collection :<
 
 }); // TODO: Replace `{}` with actual Movie model
 
