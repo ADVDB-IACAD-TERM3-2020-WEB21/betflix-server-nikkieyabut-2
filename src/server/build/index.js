@@ -404,23 +404,9 @@ webpackContext.id = "./src sync recursive ^\\.\\/(schema|schema\\/index)\\.(gql|
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // TODO: Import Mongoose here
-var mongoose = __webpack_require__(/*! mongoose */ "mongoose");
-
-mongoose.connect('mongodb://localhost:27017/test', {
-  useNewUrlParser: true
-}); // TODO: Connect to mongo here
-
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {// we're connected!
-});
-var movieSchema = new mongoose.Schema({
-  title: String // type: String,
-  // filename: String
-
-}); // TODO: Replace `{}` with actual Movie model
-
-const Movie = mongoose.model('Movie', movieSchema);
+// TODO: Connect to mongo here
+// TODO: Replace `{}` with actual Movie model
+const Movie = {};
 
 const getMovieList = async () => {
   return await Movie.find({});
@@ -446,8 +432,8 @@ const resolvers = {
 /***/ (function(module, exports) {
 
 
-    var doc = {"kind":"Document","definitions":[{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Movie"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"title"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Query"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"movies"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Movie"}}}}},"directives":[]}]}],"loc":{"start":0,"end":75}};
-    doc.loc.source = {"body":"type Movie {\r\n  title: String!\r\n}\r\n\r\ntype Query {\r\n  movies: [Movie!]!\r\n}\r\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+    var doc = {"kind":"Document","definitions":[{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Movie"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"title"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Query"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"movies"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Movie"}}}}},"directives":[]}]}],"loc":{"start":0,"end":68}};
+    doc.loc.source = {"body":"type Movie {\n  title: String!\n}\n\ntype Query {\n  movies: [Movie!]!\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
   
 
     var names = {};
@@ -559,17 +545,6 @@ module.exports = require("friendly-errors-webpack-plugin");
 /***/ (function(module, exports) {
 
 module.exports = require("fs");
-
-/***/ }),
-
-/***/ "mongoose":
-/*!***************************!*\
-  !*** external "mongoose" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("mongoose");
 
 /***/ }),
 

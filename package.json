@@ -23,8 +23,5 @@
   "homepage": "https://github.com/ADVDB-IACAD-TERM3-2020-WEB21/betflix-starter#readme",
   "devDependencies": {
     "serve": "^11.3.0"
-  },
-  "dependencies": {
-    "mongoose": "^5.9.5"
   }
 }
